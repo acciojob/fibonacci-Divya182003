@@ -1,20 +1,15 @@
-function fibonacci(num) {
-  if (num <= 0) return null; // Handle invalid input
-  if (num === 1) return 0;
-  if (num === 2) return 1;
+fibanocii    function fibonacci(num) {
+    if (num === 0) return 0;
+    if (num === 1) return 0;
+    if (num === 2) return 1;
 
-  let a = 0, b = 1, result;
-
-  for (let i = 3; i <= num; i++) {
-    result = a + b;
-    a = b;
-    b = result;
-  }
-
-  return result;
+    let a = 0, b = 1, c;
+    for (let i = 3; i <= num; i++) {
+        c = a + b;
+        a = b;
+        b = c;
+    }
+    return b;
 }
 
-// ✅ Test cases
-console.log(fibonacci(1)); // Output: 0
-console.log(fibonacci(5)); // Output: 3
-console.log(fibonacci(10)); // Output: 34
+module.exports = fibonacci;
